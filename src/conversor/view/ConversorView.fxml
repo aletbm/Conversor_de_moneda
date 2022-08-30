@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #073447;" stylesheets="@App.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="conversor.controller.Controller">
+	<children>
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab closable="false" text="Conversor de moneda">
+            <content>
+              <AnchorPane prefHeight="600.0" prefWidth="900.0">
+                     <children>
+                        <VBox prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                  				<AnchorPane prefHeight="161.0" prefWidth="900.0" style="-fx-background-color: #292929;" VBox.vgrow="ALWAYS">
+                  					<children>
+                  						<VBox prefHeight="218.0" prefWidth="900.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  							<children>
+                  								<Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: #6B6B6B;" text="Conversor de moneda" textAlignment="CENTER" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
+                  									<font>
+                  										<Font name="Century Gothic" size="30.0" />
+                  									</font>
+                  									<effect>
+                  										<Glow />
+                  									</effect>
+                  								</Label>
+                  								<Separator opacity="0.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                  								<HBox prefHeight="74.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                  									<children>
+                  										<Separator disable="true" opacity="0.0" prefHeight="44.0" prefWidth="135.0" HBox.hgrow="ALWAYS" />
+                  										<TextField fx:id="monto" prefHeight="44.0" prefWidth="220.0" promptText="Introduzca un monto..." HBox.hgrow="ALWAYS">
+                  											<font>
+                  												<Font name="Century Gothic" size="16.0" />
+                  											</font>
+                  										</TextField>
+                                                <Separator opacity="0.0" prefHeight="44.0" prefWidth="96.0" HBox.hgrow="ALWAYS" />
+                                                <ComboBox fx:id="comboBoxIn" prefHeight="44.0" prefWidth="162.0" promptText="De la divisa..." styleClass="combo-convert" HBox.hgrow="ALWAYS">
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                                                </ComboBox>
+                  										<Separator opacity="0.0" prefHeight="44.0" prefWidth="78.0" HBox.hgrow="ALWAYS" />
+                                                <Button mnemonicParsing="false" onAction="#handleConversionMoneda" prefHeight="44.0" prefWidth="133.0" style="-fx-background-color: #4DABCF; -fx-text-fill: WHITE;" styleClass="btnConversion" text="Convertir" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="19.0" />
+                                                   </font>
+                                                   <effect>
+                                                      <DropShadow height="27.22" radius="16.997500000000002" width="42.77" />
+                                                   </effect>
+                                                </Button>
+                                                <Separator layoutX="655.0" layoutY="10.0" opacity="0.0" prefHeight="44.0" prefWidth="82.0" HBox.hgrow="ALWAYS" />
+                  									</children>
+                  								</HBox>
+                                          <Separator opacity="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                  							</children>
+                  						</VBox>
+                  					</children>
+                  				</AnchorPane>
+                        				<AnchorPane prefHeight="442.0" prefWidth="900.0" style="-fx-background-color: #073447;" VBox.vgrow="ALWAYS">
+                        					<children>
+                        						<VBox layoutY="20.0" prefHeight="401.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                        							<children>
+                        								<Separator opacity="0.0" orientation="VERTICAL" prefHeight="26.0" prefWidth="0.0" VBox.vgrow="ALWAYS" />
+                        								<HBox prefHeight="97.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                        									<children>
+                        										<Separator opacity="0.0" prefHeight="99.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
+                        										<Label prefHeight="38.0" prefWidth="191.0" text="Conversion" textFill="WHITE" HBox.hgrow="ALWAYS">
+                        											<font>
+                        												<Font name="Century Gothic" size="30.0" />
+                        											</font>
+                        										</Label>
+                        										<Separator opacity="0.0" prefHeight="86.0" prefWidth="429.0" HBox.hgrow="ALWAYS" />
+                        										<ComboBox fx:id="comboBoxOut" prefHeight="45.0" prefWidth="170.0" promptText="A la divisa..." styleClass="combo-convert" HBox.hgrow="ALWAYS">
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                                                </ComboBox>
+                        										<Separator opacity="0.0" prefHeight="239.0" prefWidth="83.0" HBox.hgrow="ALWAYS" />
+                        									</children>
+                        								</HBox>
+                                          <Separator layoutX="10.0" layoutY="405.0" opacity="0.0" orientation="VERTICAL" prefHeight="14.0" prefWidth="0.0" VBox.vgrow="ALWAYS" />
+                                          <HBox prefHeight="382.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Separator opacity="0.0" prefHeight="324.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                              								<AreaChart fx:id="chartConvert" alternativeRowFillVisible="false" animated="false" prefHeight="304.0" prefWidth="828.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                              									<xAxis>
+                              										<CategoryAxis side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxis" />
+                              									</xAxis>
+                              									<yAxis>
+                              										<NumberAxis fx:id="yAxis" side="LEFT" tickLabelFill="WHITE" />
+                              									</yAxis>
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                              								</AreaChart>
+                                                <Separator opacity="0.0" prefHeight="324.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Separator layoutX="10.0" layoutY="436.0" opacity="0.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                                          <HBox prefHeight="18.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Separator opacity="0.0" prefHeight="40.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="result" prefHeight="55.0" prefWidth="361.0" style="-fx-background-color: #042331; -fx-text-fill: WHITE;" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Separator opacity="0.0" prefHeight="40.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                        								<Separator opacity="0.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                        							</children>
+                        						</VBox>
+                        					</children>
+                        				</AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Conversor de temperatura">
+               <content>
+                  <AnchorPane prefHeight="600.0" prefWidth="900.0">
+                     <children>
+                        <VBox prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="161.0" prefWidth="900.0" style="-fx-background-color: #292929;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="218.0" prefWidth="900.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="62.0" prefWidth="900.0" style="-fx-background-color: #6B6B6B;" text="Conversor de temperatura" textAlignment="CENTER" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS">
+                                             <effect>
+                                                <Glow />
+                                             </effect>
+                                             <font>
+                                                <Font name="Century Gothic" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator opacity="0.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                                          <HBox prefHeight="74.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Separator disable="true" opacity="0.0" prefHeight="44.0" prefWidth="135.0" HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="ValorTemp" prefHeight="44.0" prefWidth="220.0" promptText="Introduzca una valor..." HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Separator opacity="0.0" prefHeight="44.0" prefWidth="96.0" HBox.hgrow="ALWAYS" />
+                                                <ComboBox fx:id="comboBoxInTemp" prefHeight="44.0" prefWidth="162.0" promptText="De grados ..." styleClass="combo-convert" HBox.hgrow="ALWAYS">
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                                                </ComboBox>
+                                                <Separator opacity="0.0" prefHeight="44.0" prefWidth="78.0" HBox.hgrow="ALWAYS" />
+                                                <Button mnemonicParsing="false" onAction="#handleConversionTemperatura" prefHeight="44.0" prefWidth="133.0" style="-fx-background-color: #4DABCF; -fx-text-fill: WHITE;" styleClass="btnConversion" text="Convertir" HBox.hgrow="ALWAYS">
+                                                   <effect>
+                                                      <DropShadow height="27.22" radius="16.997500000000002" width="42.77" />
+                                                   </effect>
+                                                   <font>
+                                                      <Font name="Century Gothic" size="19.0" />
+                                                   </font>
+                                                </Button>
+                                                <Separator layoutX="655.0" layoutY="10.0" opacity="0.0" prefHeight="44.0" prefWidth="82.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Separator opacity="0.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="442.0" prefWidth="900.0" style="-fx-background-color: #073447;" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox layoutY="20.0" prefHeight="401.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                       <children>
+                                          <Separator opacity="0.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="5.0" VBox.vgrow="ALWAYS" />
+                                          <HBox prefHeight="97.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Separator opacity="0.0" prefHeight="0.0" prefWidth="107.0" HBox.hgrow="ALWAYS" />
+                                                <Label prefHeight="38.0" prefWidth="191.0" text="Conversion" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="30.0" />
+                                                   </font>
+                                                </Label>
+                                                <Separator opacity="0.0" prefHeight="8.0" prefWidth="419.0" HBox.hgrow="ALWAYS" />
+                                                <ComboBox fx:id="comboBoxOutTemp" prefHeight="45.0" prefWidth="170.0" promptText="A grados..." styleClass="combo-convert" HBox.hgrow="ALWAYS">
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                                                </ComboBox>
+                                                <Separator opacity="0.0" prefHeight="4.0" prefWidth="98.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Separator layoutX="10.0" layoutY="405.0" opacity="0.0" orientation="VERTICAL" prefHeight="14.0" prefWidth="0.0" VBox.vgrow="ALWAYS" />
+                                          <HBox prefHeight="382.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Separator opacity="0.0" prefHeight="324.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                                                <AreaChart fx:id="chartConvertTemp" alternativeRowFillVisible="false" animated="false" prefHeight="304.0" prefWidth="828.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                                   <effect>
+                                                      <Glow />
+                                                   </effect>
+                                                   <xAxis>
+                                                      <NumberAxis side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxisTemp" />
+                                                   </xAxis>
+                                                   <yAxis>
+                                                      <NumberAxis fx:id="yAxisTemp" side="LEFT" tickLabelFill="WHITE" />
+                                                   </yAxis>
+                                                </AreaChart>
+                                                <Separator opacity="0.0" prefHeight="324.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Separator layoutX="10.0" layoutY="436.0" opacity="0.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                                          <HBox prefHeight="18.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Separator opacity="0.0" prefHeight="40.0" prefWidth="401.0" HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="resultTemp" prefHeight="55.0" prefWidth="361.0" style="-fx-background-color: #042331; -fx-text-fill: WHITE;" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Century Gothic" size="18.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Separator opacity="0.0" prefHeight="40.0" prefWidth="400.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Separator opacity="0.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="900.0" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+	</children>
+</VBox>

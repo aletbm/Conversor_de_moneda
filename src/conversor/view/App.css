@@ -1,0 +1,127 @@
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: #042331;
+    -fx-legend-visible: false;
+}
+
+.axis-label { 
+    -fx-font-family: 'Century Gothic';
+    -fx-font-size: 15px;
+	-fx-text-fill: white;
+}
+
+.chart-plot-background {
+    -fx-background-color:#042331;
+}
+
+.chart-area-symbol{
+	-fx-background-color: #8785FF;
+}
+
+.chart-series-area-line{
+	-fx-stroke: #8785FF;
+	-fx-stroke-width: 1px;
+}
+
+.chart-series-area-fill{
+	-fx-fill: rgb(110, 107, 255, 0.3);
+}
+
+.chart-horizontal-grid-lines{
+    -fx-stroke: #EEE;
+    -fx-stroke-width: 0.2px;
+}
+
+.chart-vertical-grid-lines{
+    -fx-stroke: #EEE;
+    -fx-stroke-width: 0.2px;
+}
+
+.combo-convert{
+	-fx-background-color:  #073447;
+	-fx-border-width:  1.5px;
+	-fx-border-color: #4DABCF;
+	-fx-border-radius: 5px;
+    -fx-font-family: 'Century Gothic';
+    -fx-font-size: 15px;
+}
+
+.combo-convert > .arrow-button > .arrow {
+    -fx-background-color: #FFF;
+}
+
+.combo-convert:hover{
+	-fx-background-color:  #042331;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view{
+    -fx-background-color: #073447;
+}
+
+.combo-box-popup .list-view .list-cell{
+    -fx-text-fill: white;
+    -fx-padding: 4 0 4 5;
+    -fx-background-color: #073447;
+    -fx-font-family: 'Century Gothic'
+}
+
+.combo-box-popup .list-view .list-cell:hover{
+	-fx-background-color:  #042331;
+}
+
+.menu-convert-item:hover{
+	-fx-background-color:  #042331;
+}
+
+.btnConversion:focus{
+	-fx-background-color:  #042331;
+}
+
+.dialog{
+    -fx-background-color: #042331;
+}
+
+.dialog *.label{
+    -fx-text-fill: white;
+    -fx-font-family: 'Century Gothic';
+}
+
+.dialog *.header-panel{
+	-fx-background-color: #073447;
+}
+
+.dialog *.button{
+	-fx-background-color:  #073447;
+	-fx-border-width:  1.5px;
+	-fx-border-color: #4DABCF;
+	-fx-border-radius: 5px;
+    -fx-font-family: 'Century Gothic';
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: #292929;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #6B6B6B;
+}
+
+.tab .tab-label { 
+    -fx-text-fill: white;
+    -fx-font-family: 'Century Gothic';
+}

@@ -1,0 +1,45 @@
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: #073447;
+    -fx-legend-visible: false;
+}
+
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+
+.menu-convert{
+	-fx-background-color:  #073447;
+	-fx-border-width:  1.5px;
+	-fx-border-color: #4DABCF;
+	-fx-border-radius: 5px;
+}
+
+.menu-convert > .arrow-button > .arrow {
+    -fx-background-color: #FFF;
+}
+
+.menu-convert:hover{
+	-fx-background-color:  #042331;
+}
+
+.menu-convert-item{
+	-fx-background-color:  #073447;
+	-fx-padding: 10 20 10 20;
+}
+
+.menu-convert-item .label{
+	-fx-text-fill: white;
+}
+
+.menu-convert-item > .graphic-container {
+    -fx-padding: 0 20 0 0;
+}
+
+.context-menu {
+    -fx-background-color: #073447;
+}
+
+.menu-convert-item:hover{
+	-fx-background-color:  #042331;
+}
